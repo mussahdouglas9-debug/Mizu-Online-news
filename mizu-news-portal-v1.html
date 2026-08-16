@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIZU FM & TV | News Portal</title>
+<meta name="description" content="MIZU FM & TV — News, radio, television and entertainment from Malawi and beyond.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Arial,Helvetica,sans-serif;background:#f5f7fa;color:#172033;line-height:1.55}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}
+:root{--navy:#07111f;--navy2:#101e31;--gold:#f2b632;--red:#d71920;--muted:#687586;--border:#dfe5ec}
+.top{background:#030811;color:#cbd5e1;padding:7px 5%;font-size:12px;display:flex;justify-content:space-between}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 16px #0003}.nav{max-width:1200px;margin:auto;min-height:72px;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;font-size:29px;letter-spacing:2px}.logo span{color:var(--gold)}.logo small{display:block;font-size:9px;letter-spacing:3px;color:#aebccc;margin-top:-6px}.links{display:flex;gap:18px;align-items:center}.links a{font-size:13px;font-weight:bold}.links a:hover{color:var(--gold)}.hamb{display:none;background:none;border:0;color:#fff;font-size:26px}
+.breaking{background:#d71920;color:#fff;padding:10px 5%;font-weight:bold;white-space:nowrap;overflow:hidden}.breaking span{background:#a80f15;padding:6px 10px;margin-right:12px}
+.hero{background:linear-gradient(120deg,#07111f,#17365e);color:#fff;padding:70px 5%}.hero-inner{max-width:1200px;margin:auto}.badge{display:inline-block;background:var(--red);padding:5px 10px;border-radius:4px;font-size:11px;font-weight:bold}.hero h1{font-size:clamp(36px,6vw,66px);line-height:1.05;max-width:850px;margin:15px 0}.hero h1 span{color:var(--gold)}.hero p{max-width:680px;color:#d5dfeb;font-size:17px}.wrap{max-width:1200px;margin:auto;padding:55px 5%}.section-head{margin-bottom:25px}.section-head small{color:var(--red);font-weight:bold;text-transform:uppercase;letter-spacing:2px}.section-head h2{font-size:32px;margin-top:3px}.grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}.card{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 5px 22px #0000000b}.pic{height:180px;background:linear-gradient(135deg,#17365e,#07111f);display:flex;align-items:center;justify-content:center;color:#cbd5e1;background-size:cover;background-position:center}.featured .pic{height:290px}.body{padding:18px}.cat{color:var(--red);font-size:11px;font-weight:800;text-transform:uppercase}.body h3{font-size:20px;line-height:1.3;margin:7px 0}.featured h3{font-size:28px}.body p{color:var(--muted);font-size:14px}.date{font-size:11px;color:#8b97a6;margin-top:10px}
+.empty{background:#fff;border:1px dashed #cbd5e1;padding:35px;text-align:center;color:var(--muted);border-radius:10px}.radio{background:var(--navy);color:#fff}.radio-box{background:var(--navy2);border:1px solid #26364b;border-radius:12px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.play{border:0;width:62px;height:62px;border-radius:50%;background:var(--gold);font-size:24px;cursor:pointer}
+footer{background:#030811;color:#aab5c2;padding:35px 5%;text-align:center;font-size:13px}
+.admin{display:none;min-height:100vh;background:#f1f4f8}.admin.show{display:block}.adminbar{background:var(--navy);color:#fff;padding:18px 5%;display:flex;justify-content:space-between;align-items:center}.admin-layout{max-width:1200px;margin:auto;padding:25px 5%;display:grid;grid-template-columns:210px 1fr;gap:20px}.side{background:var(--navy);color:#fff;border-radius:10px;padding:18px;height:max-content}.side h3{color:var(--gold);margin-bottom:15px}.side button{display:block;width:100%;text-align:left;background:none;border:0;color:#fff;padding:11px 8px;border-radius:5px;cursor:pointer}.side button:hover,.side button.active{background:#ffffff18}.panel{background:#fff;border:1px solid var(--border);border-radius:10px;padding:22px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}.stat{padding:18px;border-radius:8px;background:#eaf1ff}.stat b{display:block;font-size:28px}.form{display:grid;gap:12px}.form label{font-size:13px;font-weight:bold}.form input,.form textarea,.form select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:6px;background:#fff}.form textarea{min-height:180px;resize:vertical}.primary{background:#1265e8;color:#fff;border:0;padding:12px 18px;border-radius:6px;font-weight:bold;cursor:pointer}.danger{background:#d71920;color:#fff;border:0;padding:7px 10px;border-radius:5px;cursor:pointer}.edit{background:#1265e8;color:#fff;border:0;padding:7px 10px;border-radius:5px;cursor:pointer}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:650px}.table th,.table td{border-bottom:1px solid var(--border);padding:11px 8px;text-align:left;font-size:13px}.actions{display:flex;gap:6px}.login{position:fixed;inset:0;background:#07111fee;display:none;align-items:center;justify-content:center;padding:20px;z-index:50}.login.show{display:flex}.loginbox{background:#fff;width:100%;max-width:420px;border-radius:12px;padding:28px}.loginbox h2{margin-bottom:5px}.loginbox p{color:var(--muted);font-size:13px;margin-bottom:18px}.error{color:#d71920;font-size:13px;margin-top:8px}
+.hidden{display:none!important}
+@media(max-width:900px){.links{display:none}.hamb{display:block}.grid{grid-template-columns:1fr 1fr}.featured{grid-column:1/-1}.admin-layout{grid-template-columns:1fr}.side{display:flex;gap:6px;overflow:auto}.side button{white-space:nowrap;width:auto}.stats{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.top{display:none}.grid{grid-template-columns:1fr}.featured{grid-column:auto}.featured .pic{height:220px}.hero{padding:50px 5%}.radio-box{flex-direction:column;align-items:flex-start}.stats{grid-template-columns:1fr}.adminbar{gap:10px}.adminbar small{display:none}}
+</style>
+</head>
+<body>
+
+<div id="site">
+<div class="top"><span>Welcome to MIZU FM & TV</span><span>News • Radio • TV • Entertainment</span></div>
+<header><div class="nav">
+<a class="logo" href="#" onclick="showSite()">MIZU<span>.</span><small>FM & TV</small></a>
+<div class="links"><a href="#home">Home</a><a href="#news">News</a><a href="#radio">MIZU FM</a><a href="#tv">MIZU TV</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#" onclick="openLogin();return false">Admin</a></div>
+<button class="hamb" onclick="toggleLinks()">☰</button></div></header>
+<div class="breaking"><span>BREAKING NEWS</span><b id="ticker">Welcome to MIZU FM & TV</b></div>
+<section class="hero" id="home"><div class="hero-inner"><span class="badge">MIZU NEWS PORTAL</span><h1>Your Voice. Your <span>News.</span> Your MIZU.</h1><p>Trusted news, information, radio, television and entertainment from Malawi and beyond.</p></div></section>
+
+<main class="wrap" id="news">
+<div class="section-head"><small>Latest Updates</small><h2>Latest News</h2></div>
+<div id="newsGrid" class="grid"></div>
+</main>
+
+<section class="radio"><div class="wrap"><div class="section-head"><small style="color:#f2b632">Listen Live</small><h2 style="color:#fff">MIZU FM</h2></div><div class="radio-box"><div><h3>MIZU FM Live</h3><p style="color:#aebccc">Connect your radio stream here later.</p></div><button class="play" onclick="radioMessage()">▶</button></div></div></section>
+
+<section class="wrap" id="tv"><div class="section-head"><small>Watch</small><h2>MIZU TV</h2></div><div class="card"><div class="pic">MIZU TV VIDEO</div><div class="body"><h3>Latest MIZU TV Programme</h3><p>Add your YouTube/video link from the admin system in the next version.</p></div></div></section>
+
+<section class="wrap" id="about"><div class="section-head"><small>Who We Are</small><h2>About MIZU</h2></div><div class="card"><div class="body"><p>MIZU FM & TV is a digital media platform for news, information, education and entertainment.</p></div></div></section>
+<section class="wrap" id="contact"><div class="section-head"><small>Get In Touch</small><h2>Contact MIZU</h2></div><div class="card"><div class="body"><p>Email: info@mizu.com</p><p>Phone: +265 XXX XXX XXX</p></div></div></section>
+<footer>© <span id="year"></span> MIZU FM & TV. All Rights Reserved.</footer>
+</div>
+
+<div id="admin" class="admin">
+<div class="adminbar"><b>MIZU ADMIN</b><div><span id="adminUser">Administrator</span> &nbsp; <button class="primary" onclick="logout()">Logout</button></div></div>
+<div class="admin-layout">
+<aside class="side"><h3>MIZU</h3><button class="active" onclick="adminTab('dashboard')">Dashboard</button><button onclick="adminTab('add')">Add News</button><button onclick="adminTab('all')">All News</button><button onclick="showSite()">View Website</button></aside>
+<section>
+<div id="dashboardTab" class="panel"><h2>Dashboard</h2><div class="stats"><div class="stat">Total News<b id="statTotal">0</b></div><div class="stat">Published<b id="statPublished">0</b></div><div class="stat">Categories<b id="statCats">0</b></div></div><h3>Recent News</h3><div id="recentTable" class="table-wrap"></div></div>
+<div id="addTab" class="panel hidden"><h2 id="formTitle">Publish News</h2><br><form class="form" onsubmit="saveNews(event)"><input type="hidden" id="editId"><label>Headline</label><input id="title" required placeholder="Enter news headline"><label>Category</label><select id="category" required><option value="">Select category</option><option>Malawi</option><option>Politics</option><option>Sports</option><option>Business</option><option>Education</option><option>Entertainment</option><option>World</option><option>Technology</option><option>Health</option></select><label>Featured image URL (optional)</label><input id="image" placeholder="https://example.com/photo.jpg"><label>Article content</label><textarea id="content" required placeholder="Write your full news story here..."></textarea><button class="primary" type="submit">Publish News</button><button type="button" class="edit hidden" id="cancelEdit" onclick="resetForm()">Cancel Edit</button></form></div>
+<div id="allTab" class="panel hidden"><h2>All News</h2><br><div id="allTable" class="table-wrap"></div></div>
+</section></div></div>
+
+<div id="login" class="login"><div class="loginbox"><h2>MIZU Admin Login</h2><p>Sign in to publish and manage news.</p><form class="form" onsubmit="login(event)"><label>Username</label><input id="username" autocomplete="username" required><label>Password</label><input id="password" type="password" autocomplete="current-password" required><button class="primary">Login</button></form><div id="loginError" class="error"></div><br><button onclick="closeLogin()" style="border:0;background:none;cursor:pointer">Cancel</button></div></div>
+
+<script>
+const ADMIN_USER="admin",ADMIN_PASS="mizu2026";
+let news=JSON.parse(localStorage.getItem("mizu_news")||"[]");
+const $=id=>document.getElementById(id);
+$("year").textContent=new Date().getFullYear();
+
+function seed(){if(news.length)return;news=[{id:Date.now(),title:"Welcome to MIZU News Portal",category:"Malawi",content:"This is your first MIZU news story. Log in to the admin dashboard to publish your own stories.",image:"",date:new Date().toISOString()}];saveStore()}
+function saveStore(){localStorage.setItem("mizu_news",JSON.stringify(news))}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function renderSite(){
+ const g=$("newsGrid"); if(!news.length){g.innerHTML='<div class="empty" style="grid-column:1/-1">No news published yet. Log in to the Admin Dashboard to publish your first story.</div>';return}
+ g.innerHTML=news.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)).map((n,i)=>`<article class="card ${i===0?"featured":""}"><div class="pic" ${n.image?`style="background-image:url('${esc(n.image)}')"`:""}>${n.image?"":"MIZU NEWS"}</div><div class="body"><div class="cat">${esc(n.category)}</div><h3>${esc(n.title)}</h3><p>${esc(n.content).slice(0,180)}${n.content.length>180?"…":""}</p><div class="date">${new Date(n.date).toLocaleDateString()}</div></div></article>`).join("");
+ $("ticker").textContent=news[0]?.title||"Welcome to MIZU FM & TV";
+}
+function renderTables(){
+ const sorted=news.slice().sort((a,b)=>new Date(b.date)-new Date(a.date));
+ const rows=sorted.map(n=>`<tr><td>${esc(n.title)}</td><td>${esc(n.category)}</td><td>${new Date(n.date).toLocaleDateString()}</td><td><div class="actions"><button class="edit" onclick="editNews(${n.id})">Edit</button><button class="danger" onclick="deleteNews(${n.id})">Delete</button></div></td></tr>`).join("");
+ const table=rows?`<table class="table"><thead><tr><th>Headline</th><th>Category</th><th>Date</th><th>Action</th></tr></thead><tbody>${rows}</tbody></table>`:'<div class="empty">No news published.</div>';
+ $("recentTable").innerHTML=table;$("allTable").innerHTML=table;
+ $("statTotal").textContent=news.length;$("statPublished").textContent=news.length;$("statCats").textContent=new Set(news.map(n=>n.category)).size;
+}
+function login(e){e.preventDefault();if($("username").value===ADMIN_USER&&$("password").value===ADMIN_PASS){localStorage.setItem("mizu_admin","1");$("login").classList.remove("show");showAdmin()}else $("loginError").textContent="Incorrect username or password."}
+function openLogin(){$("login").classList.add("show")}
+function closeLogin(){$("login").classList.remove("show")}
+function showAdmin(){$("site").style.display="none";$("admin").classList.add("show");renderTables();adminTab("dashboard")}
+function showSite(){$("admin").classList.remove("show");$("site").style.display="block";renderSite();window.scrollTo(0,0)}
+function logout(){localStorage.removeItem("mizu_admin");showSite()}
+function adminTab(tab){["dashboard","add","all"].forEach(x=>$("addTab"===x+"Tab"?"":null));$("dashboardTab").classList.toggle("hidden",tab!=="dashboard");$("addTab").classList.toggle("hidden",tab!=="add");$("allTab").classList.toggle("hidden",tab!=="all");if(tab==="dashboard"||tab==="all")renderTables()}
+function saveNews(e){e.preventDefault();const id=$("editId").value;const item={id:id?Number(id):Date.now(),title:$("title").value.trim(),category:$("category").value,image:$("image").value.trim(),content:$("content").value.trim(),date:id?(news.find(n=>n.id==id)?.date||new Date().toISOString()):new Date().toISOString()};if(id)news=news.map(n=>n.id==id?item:n);else news.unshift(item);saveStore();resetForm();renderTables();renderSite();adminTab("dashboard");alert(id?"News updated.":"News published successfully.")}
+function resetForm(){$("editId").value="";$("title").value="";$("category").value="";$("image").value="";$("content").value="";$("formTitle").textContent="Publish News";$("cancelEdit").classList.add("hidden")}
+function editNews(id){const n=news.find(x=>x.id===id);if(!n)return;$("editId").value=n.id;$("title").value=n.title;$("category").value=n.category;$("image").value=n.image||"";$("content").value=n.content;$("formTitle").textContent="Edit News";$("cancelEdit").classList.remove("hidden");adminTab("add");window.scrollTo(0,0)}
+function deleteNews(id){if(!confirm("Delete this news story?"))return;news=news.filter(n=>n.id!==id);saveStore();renderTables();renderSite()}
+function radioMessage(){alert("Add your MIZU FM streaming URL/player when your radio stream is ready.")}
+function toggleLinks(){document.querySelector(".links").style.display=document.querySelector(".links").style.display==="flex"?"none":"flex"}
+seed();renderSite();
+if(localStorage.getItem("mizu_admin")==="1")showAdmin();
+</script>
+</body>
+</html>
